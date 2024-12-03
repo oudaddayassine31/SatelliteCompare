@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyse d'Impact du Séisme au Maroc</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header-container">
+        <div class="header-content">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2c/Flag_of_Morocco.svg" alt="Drapeau du Maroc" class="logo">
+            <div class="title-container">
+                <h1>Analyse de l'Impact du Séisme Al Haouz</h1>
+                <h2>Évaluation des Dommages par Imagerie Satellite</h2>
+            </div>
+        </div>
+    </div>
+    
+    <main>
+        <div class="map-container">
+            <div class="village-controls">
+                <button onclick="showFirstLayerSet()" class="active">Douar Targa</button>
+                <button onclick="showSecondLayerSet()">Douar El Hanaine</button>
+                <button onclick="showThirdLayerSet()">Douar Elhannein</button>
+            </div>
+            <div id="map">
+                <input type="range" class="leaflet-sbs-range" data-before="Avant" data-after="Après">
+                <div class="leaflet-sbs-divider"></div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="leaflet-side-by-side.min.js"></script>
+    <script src="https://unpkg.com/georaster-layer-for-leaflet/dist/georaster-layer-for-leaflet.min.js"></script>
+    <script src="https://unpkg.com/georaster"></script>
+    <script src="script.js"></script>
+</body>
+</html>
