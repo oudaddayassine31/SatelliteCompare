@@ -34,8 +34,8 @@ function loadGeoRaster(url) {
 }
 
 function updateActiveButton(villageNumber) {
-    document.querySelectorAll('.village-controls button').forEach(btn => btn.classList.remove('active'));
-    document.querySelectorAll('.village-controls button')[villageNumber - 1].classList.add('active');
+    document.querySelectorAll('.village-nav button').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.village-nav button')[villageNumber - 1].classList.add('active');
 }
 
 function clearLayers() {
